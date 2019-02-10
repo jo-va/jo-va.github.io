@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<style>
+:root {
+    --main-color: hsl(173, 40%, 57%);
+    --body-color: hsl(0, 0%, 95%);
+    --border-color: hsl(0, 0%, 75%);
+    --font-size: 13px;
+    --page-width: 210mm;
+    --page-height: 297mm;
+    --header-height: 110px;
+    --padding-1: 30px;
+    --padding-2: 20px;
+    --right-col-width: 25%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 10px; /* Set to 0 to remove borer around resume before printing */
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: var(--font-size);
+    background: var(--body-color);
+}
+
+body {
+    margin: auto;
+    width: var(--page-width);
+    height: var(--page-height);
+    background: white;
+}
+
+.columns {
+    width: 100%;
+    padding: var(--padding-1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.col-left {
+    flex: 1 0;
+}
+.col-right {
+    flex: 0 0 var(--right-col-width);
+}
+.vert-center {
+    align-items: center;
+}
+.vert-stretch {
+    align-items: stretch;
+}
+
+header {
+    align-items: center;
+    height: var(--header-height);
+    background-color: var(--main-color);
+    color: white;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    letter-spacing: 0.18rem;
+    font-weight: 400;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 200;
+    letter-spacing: 0.23rem;
+}
+
+header p {
+    margin: 0.2rem 0;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+main section {
+    padding: 0 var(--padding-1) var(--padding-1) 0;
+}
+
+main h2, aside h2 {
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: bold;
+}
+
+main section:not(:first-of-type) h2 {
+    margin-top: -1.5rem;
+}
+
+aside section:after {
+    content: '';
+    display: block;
+    width: 100%;
+    margin-bottom: var(--padding-2);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.vert-border {
+    border-left: 1px solid var(--border-color);
+    width: var(--padding-2);
+    margin-bottom: 1rem;
+}
+
+.work, .project {
+    margin: 0 0 1rem 0;
+}
+
+.where, .project-name {
+    font-weight: bold;
+}
+
+.date {
+    margin-left: 0.5rem;
+}
+
+.what {
+    display: block;
+    font-style: italic;
+}
+
+.job-desc, .project-desc {
+    display: block;
+}
+
+.educ {
+    margin: 0 0 1rem 0;
+}
+
+ul {
+    margin-top: 0;
+}
+
+ul li {
+    margin-left: -1rem;
+}
+
+</style>
+</head>
+
+<body>
+    <header class="columns vert-center">
+        <section class="col-left">
+            <h1 class="stretch">Jonathan Vandamme</h1>
+            <h2>Full-Stack JavaScript Developer</h2>
+        </section>
+        <section class="col-right">
+            <p>jovndmm&#64;gmail.com</p>
+            <p>+34 674 56 31 81</p>
+            <p>Santander, Spain</p>
+        </section>
+    </header>
+
+    <div class="columns vert-stretch">
+        <main class="col-left">
+            <section>
+                <!--<p>An autonomous, dynamic and performance driven professional with a passion for software engineering. Experiences in software and embedded systems engineering, research and project management.</p>-->
+                <p>Autonomous, dynamic and dedicated professional with a passion for software engineering.
+                I am a Canadian and French citizen looking for new professional challenges in order to pursue my career in Europe.</p>
+            </section>
+
+            <section>
+                <h2>Work Experience</h2>
+                <div class="work">
+                    <span class="where">CGI - Consultant for WADA - World Anti Doping Agency, Canada</span>
+                    <span class="date">(2017 - 2019)</span>
+                    <span class="what">Full-Stack TypeScript and Angular Developer</span>
+                    <span class="job-desc">
+                        <ul>
+                            <li>Responsible for the scaffolding and architecture of an Angular application</li>
+                            <ul>
+                                <li>Implementation of centralized state management with Redux (NGRX)</li>
+                                <li>Internationalization support</li>
+                                <li>Development of reusable Angular components</li>
+                            </ul>
+                            <li>REST API development with NodeJS, Express and TypeScript</li>
+                            <ul>
+                                <li>API documentation with Swagger UI</li>
+                                <li>REST API testing with JavaScript, Mocha and Chai</li>
+                            </ul>
+                            <li>JAVA Backend development</li>
+                            <li>Backend and Front-end deployment on production servers</li>
+                            <li>Oracle database maintenance</li>
+                        </ul>
+                    </span>
+                </div>
+
+                <div class="work">
+                    <span class="where">Sherbrooke University, Canada</span>
+                    <span class="date">(2015 - 2017)</span>
+                    <span class="what">Research Fellow - Inolivent Laboratory</span>
+                    <span class="job-desc">Development of a medical device to ensure reliable total liquid ventilation.</span>
+                    <span class="job-desc">
+                        <ul>
+                            <li>Design and implementation of an embedded control system in accordance with the medical standards (IEC 13485, IEC 62304, IEC 60601)</li>
+                                <ul>
+                                    <li>Distributed, safety-critical hardware/software system in C++</li>
+                                    <li>Touch screen user interface in C++/OpenGL</li>
+                                    <li>Custom printed circuit boards with ARM controllers</li>
+                                </ul>
+                            </li>
+                            <li>Produce the required engineering documentation</li>
+                            <li>Plan and coordinate the subsystems integration</li>
+                            <li>Produce and maintain a budget of the project</li>
+                        </ul>
+                    </span>
+                </div>
+            </section>
+
+            <section>
+                <h2>Additional Experience</h2>
+                <div class="work">
+                    <span class="where">Sherbrooke University, Canada</span>
+                    <span class="date">(Sept. - Dec. 2010 & May - Aug. 2011)</span>
+                    <span class="what">Internship - Research Fellow</span>
+                    <span class="job-desc">Design and implement a modern graphical user interface for a liquid ventilator using WPF (C#/XAML)</span>
+                </div>
+
+                <div class="work">
+                    <span class="where">CAE, Montreal, Canada</span>
+                    <span class="date">(May - Aug. 2009 & Jan. - Apr 2010)</span>
+                    <span class="what">Internship - Software developer</span>
+                    <span class="job-desc">Flight simulator and tools development for the military and cockpit development departments, using C++ and Python</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>Master Thesis</h2>
+                <p>Non-invasive online monitoring of respiratory mechanics during total liquid ventilation</p>
+            </section>
+
+            <section>
+                <h2>Personal Projects</h2>
+                <div class="project">
+                    <span class="project-name">GoTurtle - React-Native/Firebase mobile application for distance tracking</span>
+                    <span class="when">(2018)</span>
+                    <span class="project-desc">Create teams and track your distance in real-time, available on Google PlayStore</span>
+                </div>
+                <div class="project">
+                    <span class="project-name">Hop - A global illumination renderer in C++</span>
+                    <span class="when">(2017)</span>
+                    <span class="project-desc">A multithreaded Monte-Carlo path-tracer with Lua scripting for photorealistic rendering</span>
+                </div>
+                <div class="project">
+                    <span class="project-name">YAK - A multiprocessor 64-bit kernel</span>
+                    <span class="when">(2015)</span>
+                    <span class="project-desc">Boots from a FAT32 USB stick and supports a high resolution terminal</span>
+                </div>
+            </section>
+        </main>
+
+        <div class="vert-border"></div>
+    
+        <aside class="col-right">
+            <section>
+                <h2>Education</h2>
+                <div class="educ">
+                    <span class="where">Sherbrooke University</span>
+                    <span class="date">(2015)</span>
+                    <span class="what">Master thesis in Mechanical Engineering</span>
+                </div>
+
+                <div class="educ">
+                    <span class="where">Sherbrooke University</span>
+                    <span class="date">(2011)</span>
+                    <span class="what">Mechanical engineering degree with a specialization in aeronautics.</span>
+                </div>
+
+                <div class="educ">
+                    <span class="where">Ultimate Courses</span>
+                    <span class="date">(2018)</span>
+                    <span class="what">Angular/TypeScript certification</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>Languages</h2>
+                <ul>
+                    <li>French - native</li>
+                    <li>English - fluent</li>
+                    <li>Spanish - intermediate</li>
+                    <li>German - basics</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <ul>
+                    <li>JavaScript/TypeScript</li>
+                    <li>Angular2+</li>
+                    <li>React/React-Native</li>
+                    <li>NodeJS, Express</li>
+                    <li>Firebase</li>
+                    <li>REST APIs, GraphQL</li>
+                    <li>MongoDB, RethinkDB</li>
+                    <li>SQL</li>
+                    <li>C/C++</li>
+                    <li>Linux and UNIX tools</li>
+                    <li>GIT</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Distinctions</h2>
+                <p>Co-author of 7 scientific publications</p>
+                <p>Lecturer in international conferences</p>
+                <p>5 graduate scholarships</p>
+                <p>3 Academic excellence awards</p>
+            </section>
+
+            <section>
+                <h2>Ohter Interests</h2>
+                <ul>
+                    <li>Learning Haskell</li>
+                    <li>Functional patterns in JS</li>
+                    <li>Rock climbing & outdoors</li>
+                    <li>Traditional archery</li>
+                    <li>Flint knapping</li>
+                </ul>
+            </section>
+
+            <p>References upon request</p>
+        </aside>
+    </div>
+
+    <footer></footer>
+</body>
+</html>
