@@ -24,11 +24,16 @@
 }
 
 html {
-    padding: 10px; /* Set to 0 to remove borer around resume before printing */
     margin: 0;
     font-family: 'Lato', sans-serif;
     font-size: var(--font-size);
     background: var(--body-color);
+}
+
+@media screen and (min-width: 210mm) {
+    html {
+        padding-top: 15px;
+    }
 }
 
 body {
