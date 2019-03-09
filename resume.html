@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <style>
 :root {
@@ -34,6 +36,19 @@ body {
     width: var(--page-width);
     height: var(--page-height);
     background: white;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html, body {
+        padding: 0;
+        width: var(--page-width);
+        height: var(--page-height);
+    }
 }
 
 .columns {
