@@ -72,9 +72,6 @@ body {
 .vert-center {
     align-items: center;
 }
-.vert-stretch {
-    align-items: stretch;
-}
 
 header {
     align-items: center;
@@ -118,6 +115,10 @@ main h2, aside h2 {
     font-weight: bold;
 }
 
+main section:first-of-type {
+    margin-bottom: 1rem;
+}
+
 main section:not(:first-of-type) h2 {
     margin-top: -1.5rem;
 }
@@ -142,6 +143,7 @@ aside section:after {
 
 .where, .project-name {
     font-weight: bold;
+    line-height: 1.5rem;
 }
 
 .date {
@@ -155,6 +157,11 @@ aside section:after {
 
 .job-desc, .project-desc {
     display: block;
+}
+
+.work-main .what,
+.work-main .job-desc {
+    margin-left: 1rem;
 }
 
 .educ {
@@ -175,8 +182,8 @@ ul li {
 <body>
     <header class="columns vert-center">
         <section class="col-left">
-            <h1 class="stretch">Jonathan Vandamme</h1>
-            <h2>Full-Stack JavaScript Developer</h2>
+            <h1>Jonathan Vandamme</h1>
+            <h2>Full Stack JavaScript Developer</h2>
         </section>
         <section class="col-right">
             <p>jovndmm&#64;gmail.com</p>
@@ -189,39 +196,37 @@ ul li {
         <main class="col-left">
             <section>
                 <!--<p>An autonomous, dynamic and performance driven professional with a passion for software engineering. Experiences in software and embedded systems engineering, research and project management.</p>-->
-                <p>Autonomous, dynamic and dedicated professional with a passion for software engineering.
-                I am a Canadian and French citizen looking for new professional challenges in order to pursue my career in Europe.</p>
+                Autonomous, dynamic and dedicated professional with a passion for software engineering
+                looking for new professional challenges in Vancouver to pursue my Full Stack JavaScript development career.
             </section>
 
             <section>
                 <h2>Work Experience</h2>
-                <div class="work">
-                    <span class="where">CGI - Consultant for WADA - World Anti Doping Agency, Canada</span>
+                <div class="work work-main">
+                    <span class="where">CGI - Sherbrooke, Canada</span>
                     <span class="date">(2017 - 2019)</span>
-                    <span class="what">Full-Stack TypeScript and Angular Developer</span>
+                    <span class="what">Angular Analyst/Developer - Hydro Québec</span>
                     <span class="job-desc">
                         <ul>
-                            <li>Responsible for the scaffolding and architecture of an Angular application</li>
-                            <ul>
-                                <li>Implementation of centralized state management with Redux (NGRX)</li>
-                                <li>Internationalization support</li>
-                                <li>Development of reusable Angular components</li>
-                            </ul>
-                            <li>Analyst/developer for an Angular component library</li>
+                            <li>Development of easy-to-use Angular components</li>
+                            <li>Analysis of the needs and contract creation for the components</li>
+                            <li>Component testing with Jest</li>
+                            <li>Integration into an existing codebase</li>
+                        </ul>
+                    </span>
+                    <span class="what">Full-Stack TypeScript Developer - World Anti Doping Agency</span>
+                    <span class="job-desc">
+                        <ul>
+                            <li>Scaffolding and architecture of an Angular application</li>
                             <li>REST API development with NodeJS, Express and TypeScript</li>
-                            <ul>
-                                <li>API documentation with Swagger UI</li>
-                                <li>REST API testing with JavaScript, Mocha and Chai</li>
-                            </ul>
-                            <li>JAVA Backend development</li>
+                            <li>Testing with JavaScript, Mocha and Chai</li>
                             <li>Backend and Front-end deployment on production servers</li>
-                            <li>Oracle database maintenance</li>
                         </ul>
                     </span>
                 </div>
 
-                <div class="work">
-                    <span class="where">Sherbrooke University, Canada</span>
+                <div class="work work-main">
+                    <span class="where">Sherbrooke University - Sherbrooke, Canada</span>
                     <span class="date">(2015 - 2017)</span>
                     <span class="what">Research Fellow - Inolivent Laboratory</span>
                     <span class="job-desc">Development of a medical device to ensure reliable total liquid ventilation.</span>
@@ -285,7 +290,7 @@ ul li {
         </main>
 
         <div class="vert-border"></div>
-    
+
         <aside class="col-right">
             <section>
                 <h2>Education</h2>
@@ -312,9 +317,8 @@ ul li {
                 <h2>Languages</h2>
                 <ul>
                     <li>French - native</li>
-                    <li>English - fluent</li>
+                    <li>English - advanced</li>
                     <li>Spanish - intermediate</li>
-                    <li>German - basics</li>
                 </ul>
             </section>
 
@@ -322,16 +326,15 @@ ul li {
                 <h2>Skills</h2>
                 <ul>
                     <li>JavaScript/TypeScript</li>
-                    <li>Angular2+</li>
-                    <li>React/React-Native</li>
+                    <li>Angular2+, NGRX, RxJS</li>
+                    <li>React/React-Native, Redux</li>
                     <li>NodeJS, Express</li>
-                    <li>Firebase</li>
-                    <li>REST APIs, GraphQL</li>
+                    <li>Jest, Mocha, Chai</li>
+                    <li>REST & GraphQL APIs</li>
                     <li>MongoDB, RethinkDB</li>
-                    <li>SQL</li>
-                    <li>C/C++</li>
-                    <li>Linux and UNIX tools</li>
-                    <li>GIT</li>
+                    <li>Docker</li>
+                    <li>C/C++, Java, Haskell</li>
+                    <li>GIT, UNIX tools</li>
                 </ul>
             </section>
 
@@ -348,7 +351,8 @@ ul li {
                 <ul>
                     <li>Learning Haskell</li>
                     <li>Functional patterns in JS</li>
-                    <li>Rock climbing & outdoors</li>
+                    <li>Answer on StackOverflow</li>
+                    <li>Rock climbing & Outdoors</li>
                     <li>Traditional archery</li>
                     <li>Flint knapping</li>
                 </ul>
