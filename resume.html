@@ -4,7 +4,7 @@
     <title>Resume</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,maximum-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <style>
 :root {
     --main-color: hsl(173, 40%, 57%);
@@ -123,7 +123,7 @@ main section:not(:first-of-type) h2 {
     margin-top: -1.5rem;
 }
 
-aside section:after {
+aside section:not(:last-child):after {
     content: '';
     display: block;
     width: 100%;
@@ -148,11 +148,12 @@ aside section:after {
 
 .date {
     margin-left: 0.5rem;
+    float: right;
 }
 
 .what {
     display: block;
-    font-style: italic;
+    /*font-style: italic;*/
 }
 
 .job-desc, .project-desc {
@@ -183,109 +184,110 @@ ul li {
     <header class="columns vert-center">
         <section class="col-left">
             <h1>Jonathan Vandamme</h1>
-            <h2>Full Stack JavaScript Developer</h2>
+            <h2>Software Engineer</h2>
         </section>
         <section class="col-right">
             <p>jovndmm&#64;gmail.com</p>
-            <p>+34 674 56 31 81</p>
-            <p>Santander, Spain</p>
+            <p>604 404 9669</p>
+            <p>North Vancouver</p>
         </section>
     </header>
 
     <div class="columns vert-stretch">
         <main class="col-left">
             <section>
-                Autonomous, dynamic and dedicated professional with a passion for software engineering
-                looking for new professional challenges anywhere along the North American West Coast
-                to pursue my career as a Full Stack JavaScript developer.
-            </section>
-
-            <section>
-                <h2>Work Experience</h2>
+                <h2>Experience</h2>
                 <div class="work work-main">
-                    <span class="where">CGI - Sherbrooke, Canada</span>
-                    <span class="date">(2017 - 2019)</span>
-                    <span class="what">Angular Analyst/Developer - Hydro Québec</span>
+                    <span class="where">Full-Stack Web Developer Consultant, CGI</span>
+                    <span class="date">Oct. 2017 - Jun. 2019</span>
+                    <span class="what"><b>Angular Developer and Analyst</b> for Hydro Québec</span>
+                    <span class="what">Development of a UI component library in Angular2</span>
                     <span class="job-desc">
                         <ul>
-                            <li>Development of easy-to-use Angular components</li>
-                            <li>Analysis of the needs and contract creation for the components</li>
-                            <li>Component testing with Jest</li>
-                            <li>Integration into an existing codebase</li>
+                            <li>Designed and documented easy-to-use and intuitive APIs for each UI component</li>
+                            <li>Validated the component interfaces with the client</li>
+                            <li>Supported the team during the development and testing with <b>Angular6</b> and <b>Jest</b></li>
+                            <li>Integrated the component library into the client codebase</li>
                         </ul>
                     </span>
-                    <span class="what">Full-Stack TypeScript Developer - World Anti Doping Agency</span>
+                    <span class="what"><b>Full-Stack TypeScript/Angular Developer</b> for the World Anti Doping Agency</span>
                     <span class="job-desc">
                         <ul>
-                            <li>Scaffolding and architecture of an Angular application</li>
-                            <li>REST API development with NodeJS, Express and TypeScript</li>
-                            <li>Testing with JavaScript, Mocha and Chai</li>
-                            <li>Backend and Front-end deployment on production servers</li>
+                            <li>Architected and scaffolded a scalable, internationalized <b>Angular6</b> application</li>
+                            <li>Helped scaffold the REST API using <b>NodeJS, Express and TypeScript</b></li>
+                            <li>Wrote REST API tests using <b>JavaScript, Mocha and Chai</b></li>
+                            <li>Took the initiative to develop a JavaScript library that automates the generation of SQL to setup our tests</li>
+                            <li>Participated in the Backend and Front-end deployment on production servers</li>
                         </ul>
                     </span>
                 </div>
 
                 <div class="work work-main">
-                    <span class="where">Sherbrooke University - Sherbrooke, Canada</span>
-                    <span class="date">(2015 - 2017)</span>
-                    <span class="what">Research Fellow - Inolivent Laboratory</span>
-                    <span class="job-desc">Development of a medical device to ensure reliable total liquid ventilation.</span>
+                    <span class="where">Electrical/Software Engineer, Sherbrooke University</span>
+                    <span class="date">Jan. 2015 - Apr. 2017</span>
+                    <span class="job-desc">The Inolivent Laboratory develops a medical device to induce ultra-fast therapeutic hypothermia using total liquid ventilation.</span>
                     <span class="job-desc">
                         <ul>
-                            <li>Design and implementation of an embedded control system in accordance with the medical standards (IEC 13485, IEC 62304, IEC 60601)</li>
-                                <ul>
-                                    <li>Distributed, safety-critical hardware/software system in C++</li>
-                                    <li>Touch screen user interface in C++/OpenGL</li>
-                                    <li>Custom printed circuit boards with ARM controllers</li>
-                                </ul>
-                            </li>
-                            <li>Produce the required engineering documentation</li>
-                            <li>Plan and coordinate the subsystems integration</li>
-                            <li>Produce and maintain a budget of the project</li>
+                            <li>Designed a distributed, safety-critical control system in C++</li>
+                            <li>Designed a touch user interface in C++/OpenGL using the IMGUI pattern</li>
+                            <li>Designed custom printed circuit boards with redudant ARM microcontrollers</li>
+                            <li>Documented the processes according to the medical standards (IEC 62304)</li>
+                            <li>Participated in the creation of the <b>Orixha medical startup</b></li>
+                            <li>Coinventor for a pending <b>International Patent Family Application</b></li>
                         </ul>
                     </span>
                 </div>
             </section>
 
             <section>
-                <h2>Additional Experience</h2>
+                <h2>Internships</h2>
                 <div class="work">
-                    <span class="where">Sherbrooke University, Canada</span>
-                    <span class="date">(Sept. - Dec. 2010 & May - Aug. 2011)</span>
-                    <span class="what">Internship - Research Fellow</span>
-                    <span class="job-desc">Design and implement a modern graphical user interface for a liquid ventilator using WPF (C#/XAML)</span>
+                    <span class="where">Software Developer, Sherbrooke University</span>
+                    <span class="date">Sept. - Dec. 2010 & May - Aug. 2011</span>
+                    <span class="job-desc">Developed a data-driven touch interface to control a medical ventilator using C#</span>
                 </div>
 
                 <div class="work">
-                    <span class="where">CAE, Montreal, Canada</span>
-                    <span class="date">(May - Aug. 2009 & Jan. - Apr 2010)</span>
-                    <span class="what">Internship - Software developer</span>
-                    <span class="job-desc">Flight simulator and tools development for the military and cockpit development departments, using C++ and Python</span>
+                    <span class="where">Software Developer, CAE Inc</span>
+                    <span class="date">May - Aug. 2009 & Jan. - Apr 2010</span>
+                    <span class="job-desc">Flight simulator and tools development using C++ and Python for the military and cockpit development departments</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>Personal projects</h2>
+                <div class="project">
+                    <span class="project-name">Evolving Creatures, Haskell application</span>
+                    <span class="date">2019</span>
+                    <span class="project-desc">Artifical world simulation using neural networks, genetic algorithms and functional programming techniques.</span>
+                </div>
+                <div class="project">
+                    <span class="project-name">GoTurtle, React-Native/Firebase mobile application for Relay For Life</span>
+                    <span class="date">2018</span>
+                    <span class="project-desc">A mobile application that tracks the distance covered by groups of participants during outdoors events, available on <b>Google PlayStore</b>.</span>
+                </div>
+                <div class="project">
+                    <span class="project-name">Hop, A global illumination rendering engine written in C++ and scripted in Lua</span>
+                    <span class="date">2017</span>
+                    <span class="project-desc">An interactive multithreaded and vectorized (SIMD) Monte-Carlo path-tracer for photorealistic image rendering on the CPU.</span>
+                </div>
+                <div class="project">
+                    <span class="project-name">YAK, A multiprocessor 64-bit kernel written in Assembly and C</span>
+                    <span class="date">2015</span>
+                    <span class="project-desc">A small operating system with a high resolution terminal that boots from a USB stick.</span>
                 </div>
             </section>
 
             <section>
                 <h2>Master Thesis</h2>
-                <p>Non-invasive online monitoring of respiratory mechanics during total liquid ventilation</p>
-            </section>
-
-            <section>
-                <h2>Personal Projects</h2>
-                <div class="project">
-                    <span class="project-name">GoTurtle - React-Native/Firebase mobile application for distance tracking</span>
-                    <span class="when">(2018)</span>
-                    <span class="project-desc">Create teams and track your distance in real-time, available on Google PlayStore</span>
-                </div>
-                <div class="project">
-                    <span class="project-name">Hop - A global illumination renderer in C++</span>
-                    <span class="when">(2017)</span>
-                    <span class="project-desc">A multithreaded Monte-Carlo path-tracer with Lua scripting for photorealistic rendering</span>
-                </div>
-                <div class="project">
-                    <span class="project-name">YAK - A multiprocessor 64-bit kernel</span>
-                    <span class="when">(2015)</span>
-                    <span class="project-desc">Boots from a FAT32 USB stick and supports a high resolution terminal</span>
-                </div>
+                <span class="what">Non-invasive online monitoring of respiratory mechanics during total liquid ventilation.</span>
+                <span class="job-desc">
+                    <ul>
+                        <li>Developed algorithms to estimate the lung pressure during total liquid ventilation</li>
+                        <!--<li>Implemented the algorithms on the medical device for use in real-time</li>-->
+                        <!--<li>Carried out in vitro and in vivo testing of the algorithms</li>-->
+                    </ul>
+                </span>
             </section>
         </main>
 
@@ -293,49 +295,63 @@ ul li {
 
         <aside class="col-right">
             <section>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Analytical abilities</li>
+                    <li>Quick learner</li>
+                    <li>Teamwork</li>
+                    <li>Dedicated</li>
+                    <li>Passionate</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Frontend</h2>
+                <ul>
+                    <li>JavaScript, TypeScript</li>
+                    <li>Angular2+</li>
+                    <li>React, React-Native</li>
+                    <li>NGRX, Redux, RxJS</li>
+                    <li>Babel, Webpack</li>
+                    <li>SCSS</li>
+                    <li>Jest</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Backend</h2>
+                <ul>
+                    <li>NodeJS, Express</li>
+                    <li>Mocha, Chai</li>
+                    <li>Firebase</li>
+                    <li>REST & GraphQL APIs</li>
+                    <li>MySQL, MongoDB</li>
+                    <li>Java, C/C++</li>
+                    <li>Haskell, Python</li>
+                    <li>Docker, Kubernetes</li>
+                    <li>Google Cloud Platform</li>
+                </ul>
+            </section>
+
+            <section>
                 <h2>Education</h2>
                 <div class="educ">
                     <span class="where">Sherbrooke University</span>
-                    <span class="date">(2015)</span>
-                    <span class="what">Master thesis in Mechanical Engineering</span>
+                    <span class="date">2015</span>
+                    <span class="what">Master of Applied Science in Mechanical Engineering</span>
+                    <span class="mark">GPA: 4.05/4.3</span>
                 </div>
 
                 <div class="educ">
                     <span class="where">Sherbrooke University</span>
-                    <span class="date">(2011)</span>
-                    <span class="what">Mechanical engineering degree with a specialization in aeronautics.</span>
+                    <span class="date">2011</span>
+                    <span class="what">Bachelor of Mechanical Engineering and Aeronautics</span>
+                    <span class="mark">GPA: 3.92/4.3</span>
                 </div>
 
                 <div class="educ">
                     <span class="where">Ultimate Courses</span>
-                    <span class="date">(2018)</span>
+                    <span class="date">2018</span>
                     <span class="what">Angular/TypeScript certification</span>
                 </div>
-            </section>
-
-            <section>
-                <h2>Languages</h2>
-                <ul>
-                    <li>French - native</li>
-                    <li>English - advanced</li>
-                    <li>Spanish - intermediate</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Skills</h2>
-                <ul>
-                    <li>JavaScript/TypeScript</li>
-                    <li>Angular2+, NGRX, RxJS</li>
-                    <li>React/React-Native, Redux</li>
-                    <li>NodeJS, Express</li>
-                    <li>Jest, Mocha, Chai</li>
-                    <li>REST & GraphQL APIs</li>
-                    <li>MongoDB, RethinkDB</li>
-                    <li>Docker</li>
-                    <li>C/C++, Java, Haskell</li>
-                    <li>GIT, UNIX tools</li>
-                </ul>
             </section>
 
             <section>
@@ -345,20 +361,6 @@ ul li {
                 <p>5 graduate scholarships</p>
                 <p>3 Academic excellence awards</p>
             </section>
-
-            <section>
-                <h2>Ohter Interests</h2>
-                <ul>
-                    <li>Learning Haskell</li>
-                    <li>Functional patterns in JS</li>
-                    <li>Answer on StackOverflow</li>
-                    <li>Rock climbing & Outdoors</li>
-                    <li>Traditional archery</li>
-                    <li>Flint knapping</li>
-                </ul>
-            </section>
-
-            <p>References upon request</p>
         </aside>
     </div>
 
