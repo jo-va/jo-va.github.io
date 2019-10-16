@@ -1,303 +1,407 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Resume</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,maximum-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-<style>
-:root {
-    --main-color: hsl(173, 40%, 57%);
-    --body-color: hsl(0, 0%, 95%);
-    --border-color: hsl(0, 0%, 75%);
-    --font-size: 3.45mm; /* 13px */
-    --page-width: 210mm;
-    --page-height: 297mm;
-    --header-height: 110px;
-    --padding-1: 8mm; /* 30px */
-    --padding-2: 5.3mm; /* 20px */
-    --right-col-width: 25%;
-}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --main-color: hsl(173, 40%, 57%);
+        --body-color: hsl(0, 0%, 95%);
+        --border-color: hsl(0, 0%, 75%);
+        --font-size: 3.45mm; /* 13px */
+        --page-width: 210mm;
+        --page-height: 297mm;
+        --header-height: 110px;
+        --padding-1: 8mm; /* 30px */
+        --padding-2: 5.3mm; /* 20px */
+        --right-col-width: 25%;
+      }
 
-* {
-    box-sizing: border-box;
-}
+      * {
+        box-sizing: border-box;
+      }
 
-html {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    font-size: var(--font-size);
-    background: var(--body-color);
-}
+      html {
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+        font-size: var(--font-size);
+        background: var(--body-color);
+      }
 
-@media screen and (min-width: 210mm) {
-    html {
-        padding-top: 15px;
-    }
-}
+      @media screen and (min-width: 210mm) {
+        html {
+          padding-top: 15px;
+        }
+      }
 
-body {
-    margin: auto;
-    width: var(--page-width);
-    height: var(--page-height);
-    background: white;
-}
-
-@page {
-    size: A4;
-    margin: 0;
-}
-
-@media print {
-    html, body {
-        padding: 0;
+      body {
+        margin: auto;
         width: var(--page-width);
         height: var(--page-height);
-    }
-}
+        background: white;
+      }
 
-.columns {
-    width: 100%;
-    padding: var(--padding-1);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.col-left {
-    flex: 1 0;
-}
-.col-right {
-    flex: 0 0 var(--right-col-width);
-}
-.vert-center {
-    align-items: center;
-}
+      @page {
+        size: A4;
+        margin: 0;
+      }
 
-header {
-    align-items: center;
-    height: var(--header-height);
-    background-color: var(--main-color);
-    color: white;
-}
+      @media print {
+        html,
+        body {
+          padding: 0;
+          width: var(--page-width);
+          height: var(--page-height);
+        }
+      }
 
-h1, h2 {
-    text-transform: uppercase;
-}
+      .columns {
+        width: 100%;
+        padding: var(--padding-1);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .col-left {
+        flex: 1 0;
+      }
+      .col-right {
+        flex: 0 0 var(--right-col-width);
+      }
+      .vert-center {
+        align-items: center;
+      }
 
-header h1 {
-    margin: 0.5rem 0;
-    font-size: 2rem;
-    letter-spacing: 0.18rem;
-    font-weight: 400;
-}
+      header {
+        align-items: center;
+        height: var(--header-height);
+        background-color: var(--main-color);
+        color: white;
+      }
 
-header h2 {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 200;
-    letter-spacing: 0.23rem;
-}
+      h1,
+      h2 {
+        text-transform: uppercase;
+      }
 
-header p {
-    margin: 0.2rem 0;
-    font-size: 1.1rem;
-    font-weight: 100;
-}
+      header h1 {
+        margin: 0.5rem 0;
+        font-size: 2rem;
+        letter-spacing: 0.18rem;
+        font-weight: 400;
+      }
 
-header img {
-    width: 75px;
-    border-radius: 50%;
-    margin-right: 2rem;
-}
+      header h2 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 200;
+        letter-spacing: 0.23rem;
+      }
 
-main section {
-    padding: 0 var(--padding-1) var(--padding-1) 0;
-}
+      header p {
+        margin: 0.2rem 0;
+        font-size: 1.1rem;
+        font-weight: 100;
+      }
 
-main h2, aside h2 {
-    color: var(--main-color);
-    font-size: 1.2rem;
-    margin: 0 0 0.5rem 0;
-    font-weight: bold;
-}
+      header img {
+        width: 75px;
+        border-radius: 50%;
+        margin-right: 2rem;
+      }
 
-main section:first-of-type {
-    /*margin-bottom: 1rem;*/
-    margin-top: -1rem;
-}
+      main section {
+        padding: 0 var(--padding-1) var(--padding-1) 0;
+      }
 
-main section:not(:first-of-type) h2 {
-    margin-top: -1.5rem;
-}
+      main h2,
+      aside h2 {
+        color: var(--main-color);
+        font-size: 1.2rem;
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+      }
 
-aside section:not(:last-child):after {
-    content: '';
-    display: block;
-    width: 100%;
-    margin-bottom: var(--padding-2);
-    border-bottom: 1px solid var(--border-color);
-}
+      main section:first-of-type {
+        /*margin-bottom: 1rem;*/
+        margin-top: -1rem;
+      }
 
-.vert-border {
-    border-left: 1px solid var(--border-color);
-    width: var(--padding-2);
-    margin-bottom: 2rem;
-}
+      main section:not(:first-of-type) h2 {
+        margin-top: -1.5rem;
+      }
 
-.work, .project {
-    margin: 0 0 1rem 0;
-}
+      aside section:not(:last-child):after {
+        content: '';
+        display: block;
+        width: 100%;
+        margin-bottom: var(--padding-2);
+        border-bottom: 1px solid var(--border-color);
+      }
 
-.where, .project-name {
-    font-weight: bold;
-    line-height: 1.5rem;
-}
+      .vert-border {
+        border-left: 1px solid var(--border-color);
+        width: var(--padding-2);
+        margin-bottom: 2rem;
+      }
 
-.date {
-    margin-left: 0.5rem;
-    float: right;
-}
+      .work,
+      .project {
+        margin: 0 0 1rem 0;
+      }
 
-.what {
-    display: block;
-    /*font-style: italic;*/
-}
+      .where,
+      .project-name {
+        font-weight: bold;
+        line-height: 1.5rem;
+      }
 
-.job-desc, .project-desc {
-    display: block;
-}
+      .date {
+        margin-left: 0.5rem;
+        float: right;
+      }
 
-.work-main .what,
-.work-main .job-desc {
-    margin-left: 1rem;
-}
+      .what {
+        display: block;
+        /*font-style: italic;*/
+      }
 
-.educ {
-    margin: 0 0 1rem 0;
-}
+      .job-desc,
+      .project-desc {
+        display: block;
+      }
 
-.github {
-    font-size: 80%;
-    margin-left: 10px;
-    text-transform: none;
-}
+      .work-main .what,
+      .work-main .job-desc {
+        margin-left: 1rem;
+      }
 
-ul {
-    margin-top: 0;
-}
+      .educ {
+        margin: 0 0 1rem 0;
+      }
 
-ul li {
-    margin-left: -1rem;
-}
+      .github {
+        font-size: 80%;
+        margin-left: 10px;
+        text-transform: none;
+      }
 
-</style>
-</head>
+      ul {
+        margin-top: 0;
+      }
 
-<body>
+      ul li {
+        margin-left: -1rem;
+      }
+    </style>
+  </head>
+
+  <body>
     <header class="columns vert-center">
-        <img src="./profile.jpg">
-        <section class="col-left">
-            <h1>Jonathan Vandamme</h1>
-            <h2>Software Engineer</h2>
-        </section>
-        <section class="col-right">
-            <p>jovndmm&#64;gmail.com</p>
-            <p>604 404-9669</p>
-            <p>North Vancouver</p>
-        </section>
+      <img src="./profile.jpg" />
+      <section class="col-left">
+        <h1>Jonathan Vandamme</h1>
+        <h2>Software Engineer</h2>
+      </section>
+      <section class="col-right">
+        <p>jovndmm&#64;gmail.com</p>
+        <p>604 404-9669</p>
+        <p>North Vancouver</p>
+      </section>
     </header>
 
     <div class="columns vert-stretch">
-        <main class="col-left">
-            <section>
-                <p>Experience in Full-Stack web development, embedded systems engineering, research and project management. Dedicated, enthusiastic team player committed to efficiently resolving project issues and willing to take 
-                ownership of core components.</p>              
-            </section>
-            <section>
-                <h2>Work Experience</h2>
-                <div class="work work-main">
-                    <span class="where">Full-Stack Web Developer Consultant, CGI</span>
-                    <span class="date">Oct. 2017 - Jun. 2019</span>
-                    <span class="what"><b>Angular Developer, UX Expert and Analyst</b> for Hydro-Québec</span>
-                    <span class="what">Development of a UI component library in Angular2.</span>
-                    <span class="job-desc">
-                        <ul>
-                            <li>Designed and documented easy-to-use and intuitive APIs for each UI component.</li>
-                            <li>Validated the UX and component interfaces with the client.</li>
-                            <li>Supported the team during the development and testing with <b>Angular6</b> and <b>Jest</b>.</li>
-                            <li>Integrated the component library into the client codebase.</li>
-                        </ul>
-                    </span>
-                    <span class="what"><b>Full-Stack TypeScript/Angular Developer</b> for the World Anti-Doping Agency</span>
-                    <span class="job-desc">
-                        <ul>
-                            <li>Architected and scaffolded a scalable, internationalized <b>Angular6</b> application.</li>
-                            <li>Helped scaffold the REST API using <b>NodeJS, Express and TypeScript</b>.</li>
-                            <li>Wrote REST API tests using <b>JavaScript, Mocha and Chai</b>.</li>
-                            <li>Took the initiative to develop a <b>JavaScript library</b> that automated the generation of SQL to setup our tests.</li>
-                            <li>Participated in the Backend and Frontend deployment on production servers.</li>
-                        </ul>
-                    </span>
-                </div>
+      <main class="col-left">
+        <section>
+          <p>
+            Experience in Full-Stack web development, embedded systems
+            engineering, research and project management. Dedicated,
+            enthusiastic team player committed to efficiently resolving project
+            issues and willing to take ownership of core components.
+          </p>
+        </section>
+        <section>
+          <h2>Work Experience</h2>
+          <div class="work work-main">
+            <span class="where">Full-Stack Web Developer Consultant, CGI</span>
+            <span class="date">Oct. 2017 - Jun. 2019</span>
+            <span class="what"
+              ><b>Angular Developer, UX Expert and Analyst</b> for
+              Hydro-Québec</span
+            >
+            <span class="what"
+              >Development of a UI component library in Angular2.</span
+            >
+            <span class="job-desc">
+              <ul>
+                <li>
+                  Designed and documented easy-to-use and intuitive APIs for
+                  each UI component.
+                </li>
+                <li>
+                  Validated the UX and component interfaces with the client.
+                </li>
+                <li>
+                  Supported the team during the development and testing with
+                  <b>Angular6</b> and <b>Jest</b>.
+                </li>
+                <li>
+                  Integrated the component library into the client codebase.
+                </li>
+              </ul>
+            </span>
+            <span class="what"
+              ><b>Full-Stack TypeScript/Angular Developer</b> for the World
+              Anti-Doping Agency</span
+            >
+            <span class="job-desc">
+              <ul>
+                <li>
+                  Architected and scaffolded a scalable, internationalized
+                  <b>Angular6</b> application.
+                </li>
+                <li>
+                  Helped scaffold the REST API using
+                  <b>NodeJS, Express and TypeScript</b>.
+                </li>
+                <li>
+                  Wrote REST API tests using <b>JavaScript, Mocha and Chai</b>.
+                </li>
+                <li>
+                  Took the initiative to develop a
+                  <b>JavaScript library</b> that automated the generation of SQL
+                  to setup our tests.
+                </li>
+                <li>
+                  Participated in the Backend and Frontend deployment on
+                  production servers.
+                </li>
+              </ul>
+            </span>
+          </div>
 
-                <div class="work work-main">
-                    <span class="where">Electrical/Software Engineer, Sherbrooke University</span>
-                    <span class="date">Jan. 2015 - Apr. 2017</span>
-                    <span class="job-desc">The Inolivent Laboratory develops a medical device to induce ultra-fast therapeutic hypothermia using total liquid ventilation.</span>
-                    <span class="job-desc">
-                        <ul>
-                            <li>Designed a distributed, safety-critical control system in C++.</li>
-                            <li>Designed a touch user interface in C++/OpenGL using the IMGUI pattern.</li>
-                            <li>Designed custom printed circuit boards with redundant ARM microcontrollers.</li>
-                            <li>Documented the processes according to the medical standards (IEC 62304).</li>
-                            <li>Developed algorithms to monitor the elasticity of the lungs in real-time.</li>
-                            <li>Participated in the creation of the <b>Orixha medical startup</b>.</li>
-                            <li>Coinventor for a pending <b>International Patent Family Application</b>.</li>
-                        </ul>
-                    </span>
-                </div>
-            </section>
+          <div class="work work-main">
+            <span class="where"
+              >Electrical/Software Engineer, Sherbrooke University</span
+            >
+            <span class="date">Jan. 2015 - Apr. 2017</span>
+            <span class="job-desc"
+              >The Inolivent Laboratory develops a medical device to induce
+              ultra-fast therapeutic hypothermia using total liquid
+              ventilation.</span
+            >
+            <span class="job-desc">
+              <ul>
+                <li>
+                  Designed a distributed, safety-critical control system in C++.
+                </li>
+                <li>
+                  Designed a touch user interface in C++/OpenGL using the IMGUI
+                  pattern.
+                </li>
+                <li>
+                  Designed custom printed circuit boards with redundant ARM
+                  microcontrollers.
+                </li>
+                <li>
+                  Documented the processes according to the medical standards
+                  (IEC 62304).
+                </li>
+                <li>
+                  Developed algorithms to monitor the elasticity of the lungs in
+                  real-time.
+                </li>
+                <li>
+                  Participated in the creation of the
+                  <b>Orixha medical startup</b>.
+                </li>
+                <li>
+                  Coinventor for a pending
+                  <b>International Patent Family Application</b>.
+                </li>
+              </ul>
+            </span>
+          </div>
+        </section>
 
-            <section>
-                <h2>Internships</h2>
-                <div class="work">
-                    <span class="where">Software Developer, Sherbrooke University</span>
-                    <span class="date">Sept. - Dec. 2010 & May - Aug. 2011</span>
-                    <span class="job-desc">Developed a data-driven touch interface to control a medical ventilator using C#.</span>
-                </div>
+        <section>
+          <h2>Internships</h2>
+          <div class="work">
+            <span class="where">Software Developer, Sherbrooke University</span>
+            <span class="date">Sept. - Dec. 2010 & May - Aug. 2011</span>
+            <span class="job-desc"
+              >Developed a data-driven touch interface to control a medical
+              ventilator using C#.</span
+            >
+          </div>
 
-                <div class="work">
-                    <span class="where">Software Developer, CAE Inc</span>
-                    <span class="date">May - Aug. 2009 & Jan. - Apr 2010</span>
-                    <span class="job-desc">Flight simulator and tools development using C++ and Python for the military and cockpit development departments.</span>
-                </div>
-            </section>
+          <div class="work">
+            <span class="where">Software Developer, CAE Inc</span>
+            <span class="date">May - Aug. 2009 & Jan. - Apr 2010</span>
+            <span class="job-desc"
+              >Flight simulator and tools development using C++ and Python for
+              the military and cockpit development departments.</span
+            >
+          </div>
+        </section>
 
-            <section>
-                <h2>Personal projects <span class="github">https://github.com/jo-va</span></h2>
-                <div class="project">
-                    <span class="project-name">Evolving Creatures - Haskell application</span>
-                    <span class="date">2019</span>
-                    <span class="project-desc">Artifical world simulation using neural networks, genetic algorithms and functional programming techniques.</span>
-                </div>
-                <div class="project">
-                    <span class="project-name">GoTurtle - React-Native/Firebase mobile application for Relay For Life</span>
-                    <span class="date">2018</span>
-                    <span class="project-desc">A mobile application that tracks the distance covered by groups of participants during outdoors events, available on <b>Google PlayStore</b>.</span>
-                </div>
-                <div class="project">
-                    <span class="project-name">Hop - A global illumination rendering engine written in C++ and scripted in Lua</span>
-                    <span class="date">2017</span>
-                    <span class="project-desc">An interactive multithreaded and vectorized (SIMD) Monte-Carlo path-tracer for photorealistic image rendering on the CPU.</span>
-                </div>
-                <div class="project">
-                    <span class="project-name">YAK - A multiprocessor 64-bit kernel written in Assembly and C</span>
-                    <span class="date">2015</span>
-                    <span class="project-desc">A small operating system with a high resolution terminal that boots from a USB stick.</span>
-                </div>
-            </section>
+        <section>
+          <h2>
+            Personal projects
+            <span class="github">https://github.com/jo-va</span>
+          </h2>
+          <div class="project">
+            <span class="project-name"
+              >Evolving Creatures - Haskell application</span
+            >
+            <span class="date">2019</span>
+            <span class="project-desc"
+              >Artifical world simulation using neural networks, genetic
+              algorithms and functional programming techniques.</span
+            >
+          </div>
+          <div class="project">
+            <span class="project-name"
+              >GoTurtle - React-Native/Firebase mobile application for Relay For
+              Life</span
+            >
+            <span class="date">2018</span>
+            <span class="project-desc"
+              >A mobile application that tracks the distance covered by groups
+              of participants during outdoors events, available on
+              <b>Google PlayStore</b>.</span
+            >
+          </div>
+          <div class="project">
+            <span class="project-name"
+              >Hop - A global illumination rendering engine written in C++ and
+              scripted in Lua</span
+            >
+            <span class="date">2017</span>
+            <span class="project-desc"
+              >An interactive multithreaded and vectorized (SIMD) Monte-Carlo
+              path-tracer for photorealistic image rendering on the CPU.</span
+            >
+          </div>
+          <div class="project">
+            <span class="project-name"
+              >YAK - A multiprocessor 64-bit kernel written in Assembly and
+              C</span
+            >
+            <span class="date">2015</span>
+            <span class="project-desc"
+              >A small operating system with a high resolution terminal that
+              boots from a USB stick.</span
+            >
+          </div>
+        </section>
 
-            <!--<section>
+        <!--<section>
                 <h2>Master Thesis</h2>
                 <span class="what">Non-invasive online monitoring of respiratory mechanics during total liquid ventilation.</span>
                 <span class="job-desc">
@@ -308,12 +412,12 @@ ul li {
                     </ul>
                 </span>
             </section>-->
-        </main>
+      </main>
 
-        <div class="vert-border"></div>
+      <div class="vert-border"></div>
 
-        <aside class="col-right">
-            <!--<section>
+      <aside class="col-right">
+        <!--<section>
                 <h2>Skills</h2>
                 <ul>
                     <li>Analytical abilities</li>
@@ -323,47 +427,47 @@ ul li {
                     <li>Passionate</li>
                 </ul>
             </section>-->
-            <section>
-                <h2>Technologies</h2>
-                <b>Frontend</b>
-                <ul>
-                    <li>JavaScript (ES6+)</li>
-                    <li>TypeScript</li>
-                    <li>Angular2+</li>
-                    <li>React, React-Native</li>
-                    <li>NGRX, Redux</li>
-                    <li>RxJS</li>
-                    <li>HTML, CSS, SCSS</li>
-                </ul>
-                <b>Backend</b>
-                <ul>
-                    <li>NodeJS, Express</li>
-                    <li>Firebase</li>
-                    <li>Java, C/C++</li>
-                    <li>Haskell, Python</li>
-                    <li>REST & GraphQL APIs</li>
-                    <li>MySQL</li>
-                    <li>MongoDB, RethinkDB</li>
-                </ul>
-                <b>Package Managers / Bundlers</b>
-                <ul>
-                    <li>NPN, Yarn</li>
-                    <li>Webpack</li>
-                    <!--<li>Gulp</li>-->
-                </ul>
-                <b>Testing frameworks</b>
-                <ul>
-                    <li>Jest</li>
-                    <li>Mocha, Chai</li>
-                </ul>
-                <b>Containers / Cloud</b>
-                <ul>
-                    <li>Docker</li>
-                    <li>Kubernetes</li>
-                    <li>Google Cloud Platform</li>
-                </ul>
-            </section>
-            <!--<section>
+        <section>
+          <h2>Technologies</h2>
+          <b>Frontend</b>
+          <ul>
+            <li>JavaScript (ES6+)</li>
+            <li>TypeScript</li>
+            <li>Angular2+</li>
+            <li>React, React-Native</li>
+            <li>NGRX, Redux</li>
+            <li>RxJS</li>
+            <li>HTML, CSS, SCSS</li>
+          </ul>
+          <b>Backend</b>
+          <ul>
+            <li>NodeJS, Express</li>
+            <li>Firebase</li>
+            <li>Java, C/C++</li>
+            <li>Haskell, Python</li>
+            <li>REST & GraphQL APIs</li>
+            <li>MySQL</li>
+            <li>MongoDB, RethinkDB</li>
+          </ul>
+          <b>Package Managers / Bundlers</b>
+          <ul>
+            <li>NPN, Yarn</li>
+            <li>Webpack</li>
+            <!--<li>Gulp</li>-->
+          </ul>
+          <b>Testing frameworks</b>
+          <ul>
+            <li>Jest</li>
+            <li>Mocha, Chai</li>
+          </ul>
+          <b>Containers / Cloud</b>
+          <ul>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Google Cloud Platform</li>
+          </ul>
+        </section>
+        <!--<section>
                 <h2>Frontend</h2>
                 <ul>
                     <li>JavaScript, TypeScript</li>
@@ -390,43 +494,46 @@ ul li {
                 </ul>
             </section>-->
 
-            <section>
-                <h2>Education</h2>
-                <div class="educ">
-                    <span class="where">Sherbrooke University</span>
-                    <span class="date">2015</span>
-                    <span class="what">Master of Applied Science in Mechanical Engineering</span>
-                    <span class="mark">GPA: 4.05/4.3</span>
-                </div>
+        <section>
+          <h2>Education</h2>
+          <div class="educ">
+            <span class="where">Sherbrooke University</span>
+            <span class="date">2015</span>
+            <span class="what"
+              >Master of Applied Science in Mechanical Engineering</span
+            >
+            <span class="mark">GPA: 4.05/4.3</span>
+          </div>
 
-                <div class="educ">
-                    <span class="where">Sherbrooke University</span>
-                    <span class="date">2011</span>
-                    <span class="what">Bachelor of Mechanical Engineering and Aeronautics</span>
-                    <span class="mark">GPA: 3.92/4.3</span>
-                </div>
+          <div class="educ">
+            <span class="where">Sherbrooke University</span>
+            <span class="date">2011</span>
+            <span class="what"
+              >Bachelor of Mechanical Engineering and Aeronautics</span
+            >
+            <span class="mark">GPA: 3.92/4.3</span>
+          </div>
 
-                <div class="educ">
-                    <span class="where">Ultimate Courses</span>
-                    <span class="date">2018</span>
-                    <span class="what">Angular/TypeScript certification</span>
-                </div>
-            </section>
+          <div class="educ">
+            <span class="where">Ultimate Courses</span>
+            <span class="date">2018</span>
+            <span class="what">Angular/TypeScript certification</span>
+          </div>
+        </section>
 
-            <section>
-                <h2>Distinctions</h2>
-                <ul>
-                    <li>Co-author of 7 scientific publications</li>
-                    <li>Lecturer in international conferences</li>
-                    <li>5 graduate scholarships</li>
-                    <li>3 Academic excellence awards</li>
-                    <li>International Patent Family application pending</li>
-                </ul>
-
-            </section>
-        </aside>
+        <section>
+          <h2>Distinctions</h2>
+          <ul>
+            <li>Co-author of 7 scientific publications</li>
+            <li>Lecturer in international conferences</li>
+            <li>5 graduate scholarships</li>
+            <li>3 Academic excellence awards</li>
+            <li>International Patent Family application pending</li>
+          </ul>
+        </section>
+      </aside>
     </div>
 
     <footer></footer>
-</body>
+  </body>
 </html>
